@@ -21,7 +21,7 @@ export async function getPosts() {
 }
 
 export async function getPostsPaginated(page: number) {
-  const response = await postsClient.get('', {
+  const response = await postsClient.get<Post[]>('/posts', {
     params: {
       _page: page,
       _sort: 'title',
