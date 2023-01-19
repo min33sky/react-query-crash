@@ -6,7 +6,7 @@ export default function PostList1() {
     queryKey: ['posts'],
     queryFn: getPosts,
     placeholderData: [
-      { id: 1, title: 'Initial Data...', body: '...', userId: 'bocchi' },
+      { id: 1, title: 'Initial Data...', body: '...', userId: 1557 },
     ],
   });
 

@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
 import { getPost } from './api/posts';
 import './App.css';
+import CreatePost from './components/createPost';
 import PostList1 from './components/PostList1';
 import PostList2 from './components/PostList2';
 import Post from './Post';
@@ -30,6 +31,13 @@ function App() {
       <button onClick={() => setCurrentPage(<PostList2 />)}>Posts List2</button>
       <button onClick={() => setCurrentPage(<Post id={1} />)}>
         First Post
+      </button>
+      <button
+        onClick={() =>
+          setCurrentPage(<CreatePost setCurrentPage={setCurrentPage} />)
+        }
+      >
+        New Post
       </button>
       <br />
       {currentPage}

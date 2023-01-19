@@ -4,7 +4,7 @@ type Post = {
   id: number;
   title: string;
   body: string;
-  userId: string;
+  userId: number;
 };
 
 const postsClient = axios.create({
@@ -51,10 +51,10 @@ export async function createPost({
   title: string;
   body: string;
 }) {
-  const response = await postsClient.post<Post>('', {
+  const response = await postsClient.post<Post>('/posts', {
     title,
     body,
-    userId: crypto.randomUUID(),
+    userId: 1,
     id: Date.now(),
   });
   return response.data;
