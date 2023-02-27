@@ -33,7 +33,9 @@ export default function CreatePost({
   return (
     <div>
       {createPostMutation.isError && JSON.stringify(createPostMutation.error)}
+
       <h1>Create Post</h1>
+
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title</label>

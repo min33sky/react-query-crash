@@ -1,8 +1,8 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 import { useState } from 'react';
 import { getPost } from './api/posts';
 import './App.css';
-import CreatePost from './components/createPost';
+import CreatePost from './components/CreatePost';
 import PostList1 from './components/PostList1';
 import PostList2 from './components/PostList2';
 import PostListInfinite from './components/PostListInfinite';
@@ -48,7 +48,8 @@ function App() {
         Post List Infinite
       </button>
       <br />
-      {currentPage}
+
+      <div>{currentPage}</div>
     </div>
   );
 }
